@@ -24,7 +24,7 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build Docker Image
-        run: docker build -t ghcr.io/robbepeeters/it_landscape:latest -f Dockerfile .
+        run: docker build -t ghcr.io/robbepeeters/${{ github.repository }}:latest -f Dockerfile .
 
       - name: Push Docker Image
-        run: docker push ghcr.io/robbepeeters/it_landscape:latest
+        run: docker push ghcr.io/robbepeeters/${{ github.repository }}:latest
