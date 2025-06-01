@@ -1,5 +1,8 @@
 name: CI/CD Pipeline
 run-name: GitHub Actions Docker Build
+permissions:
+  packages: write
+  contents: read
 on:
   push:
     branches:
